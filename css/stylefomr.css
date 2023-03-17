@@ -1,0 +1,9 @@
+input{
+    border-radius: 6px;
+    border: 3px solid orange;
+    background-color: rgb(204, 177, 101);
+}
+.tipoinputs{
+    background-color: beige;
+    width: 250px;
+}
