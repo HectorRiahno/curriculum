@@ -116,7 +116,95 @@ nav {
     text-transform: uppercase;
     box-shadow: 0 8px 32px rgba(97, 31, 31, 0.46);
 }
-/* #############pide de pagin################ */
+/* ###################education################ ###########################*/
+.section-education{
+    background-color: #ced5e4;
+}
+.section-education .title{
+    display:block;
+    margin: 15px 0;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+}
+.content-education{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-bottom: 30px;
+}
+.education{
+    width: 30%;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 30px;
+}
+.education i{
+    border: 2px solid #d03d3d;
+    border-radius: 50%;
+    background-color: #d03d3d;
+    color: white;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    text-align: center;
+    line-height: 36px;
+}
+.education:hover{
+    background-color: #d03d3d;
+    box-shadow: 0 0 8px gray;
+    transition: all ease-in-out .4s;
+    color: #fff;
+}
+.content-education .education a{
+    color: gray;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.content-education .education a:hover{
+    color: #dd0000;
+}
+/* %%%%%%%%%%%%%%%%%%%%%%%cerficades%%%%%%%%%%%%%%%%%% */
+.section-certificates .title{
+    display:block;
+    margin: 15px 0 0 0;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+}
+.content-certificates{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-bottom: 30px;
+}
+.certificates{
+    width: 22%;
+    border-radius: 5px;
+    border: 1px solid #dd0000;
+    padding: 15px;
+    margin-top: 15px;
+    text-align: center;
+}
+.certificate img{
+    height: auto;
+    width: 100px;
+}
+.certificates a{
+    font-size: 12px;
+    color: gray;
+    text-decoration: none;
+}
+.certificates:hover{
+    background-color: #d03d3d;
+    box-shadow: 0 0 8px gray;
+    color: #fff;
+    transform: scale(1.06);
+    transition: all ease-in-out .45s;
+}
+
+/* #############pide de pagina################ */
 footer{
     background-color: #5d6678;
     padding: 50px 0 20px 0;
