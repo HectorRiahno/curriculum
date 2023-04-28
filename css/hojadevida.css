@@ -118,7 +118,7 @@ nav {
 }
 /* ###################education################ ###########################*/
 .section-education{
-    background-color: #ced5e4;
+    background-color: #bbbec3;
 }
 .section-education .title{
     display:block;
@@ -187,7 +187,7 @@ nav {
     margin-top: 15px;
     text-align: center;
 }
-.certificate img{
+.certificates img{
     height: auto;
     width: 100px;
 }
