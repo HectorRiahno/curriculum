@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      input {
+        /* background-color: aqua; 
+        border: 10px;
+        border-color: rgb(203, 0, 0); */
+        border: none;
+        border-bottom: 2px solid black;
+      }
+      #contenido {
+        padding: 20px;
+        max-width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="contedor-padre">
+      <div id="contenido">
+        <input id="input" type="text" />
+        <button id="btn" onclick="calcular()">calcular</button>
+      </div>
+      <div class="rta">
+        <h1 id="rta1"></h1>
+        <h1 id="fibo"></h1>
+        <h1 id="par"></h1>
+        <h1 id="impar"></h1>
+      </div>
+    </section>
+    <script>
+      let numero = [];
+      let resultado;
+
+      function calcular() {
+        let resultado = [0, 1];
+
+        let fibo = document.getElementById("fibo");
+        let par = document.getElementById("par");
+        let impar = document.getElementById("impar");
+        let numero1 = parseInt(document.getElementById("input").value);
+        let cajacontenido = document.getElementById("input");
+        let rta1 = document.getElementById("rta1");
+
+        //######## VALIDACIONES #############
+        if (isNaN(numero1) == true) {
+          alert("ingrese un numero");
+          input.value = "";
+          input.focus();
+          cajacontenido.style.border = "none";
+          cajacontenido.style.borderBottom = "2px solid red";
+          return;
+        } else {
+          input.value = "";
+          input.focus();
+          cajacontenido.style.backgroundColor = "white";
+        }
+        if (
+          numero1 == 0 ||
+          String(numero1).trim().length != 1 ||
+          String(numero1).trim().length == " " ||
+          String(numero1).trim().length == "-"
+        ) {
+          alert("ingrese un numero numerico");
+          input.value = "";
+          input.focus();
+          cajacontenido.style.border = "none";
+          cajacontenido.style.borderBottom = "2px solid green";
+          return;
+        } else {
+          input.value = "";
+          input.focus();
+          cajacontenido.style.backgroundColor = "white";
+        }
+
+        //######### PROCESOS DE CALCULO #######
+        let c;
+        let p = "0,1";
+        let resultado1 = [0, 1];
+
+        //!!!!!!serie de fibonacci!!!!!!!!
+        for (let i = 0; i < numero1; i++) {
+          c = resultado1[0] + resultado1[1];
+          resultado1[0] = resultado1[1];
+          resultado1[1] = c;
+
+          // Agregar coma solo si no es el último número
+          if (i !== numero1) {
+            p +=",";
+          }
+          //##############
+          if(c%2==0){
+            par.innerText=("par: "+c);
+          }
+          if(c%2!==0){
+            impar.innerText=("impar: "+c);
+          }
+
+          p +=c;
+          rta1.innerText = (p);
+        }
+      }
+    </script>
+  </body>
+</html>
